@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Background_Yellow"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@color/Header_Yellow">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/logo_dobos"
+            android:contentDescription="Logo"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SD KATOLIK FRATER DON BOSCO MANADO"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tahun Ajaran 2025/2026"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IndoKuis"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:paddingTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="48dp"
+            android:hint="Cari"
+            android:background="@drawable/search_bg"
+            android:paddingHorizontal="10dp" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/search_logo"
+            android:layout_marginStart="10dp"
+            android:contentDescription="Search Icon"
+            android:padding="12dp"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/spinner_bg"/>
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp">
+
+        <TableLayout
+            android:id="@+id/table_scores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:background="@android:color/white"
+            android:padding="4dp">
+
+            <TableRow>
+                <TextView android:text="Nama" android:padding="8dp" android:background="#CCCCCC" />
+                <TextView android:text="Skor" android:padding="8dp" android:background="#CCCCCC" />
+                <TextView android:text="1." android:padding="8dp" android:background="#EEEEEE" />
+                <TextView android:text="2." android:padding="8dp" android:background="#EEEEEE" />
+                <TextView android:text="3." android:padding="8dp" android:background="#EEEEEE" />
+                <TextView android:text="4." android:padding="8dp" android:background="#EEEEEE" />
+                <TextView android:text="5." android:padding="8dp" android:background="#EEEEEE" />
+                <TextView android:text="6." android:padding="8dp" android:background="#EEEEEE" />
+                <TextView android:text="7." android:padding="8dp" android:background="#EEEEEE" />
+                <TextView android:text="8." android:padding="8dp" android:background="#EEEEEE" />
+                <TextView android:text="9." android:padding="8dp" android:background="#EEEEEE" />
+                <TextView android:text="10." android:padding="8dp" android:background="#EEEEEE" />
+            </TableRow>
+        </TableLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="320dp">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:id="@+id/btn_back"
+            android:background="@drawable/back_button"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="114dp"
+            android:contentDescription="butt_back_dashboard"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="24sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:id="@+id/btn_next"
+            android:background="@drawable/next_button"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="butt_next_dashboard"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp">
+
+        <ImageButton
+            android:id="@+id/btn_prev"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/back_button"
+            android:contentDescription="Previous" />
+    </LinearLayout>
+</LinearLayout>

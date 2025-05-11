@@ -1,0 +1,303 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Background_Yellow"
+    tools:context=".edit_minigame">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:padding="9dp"
+        android:background="@color/Header_Yellow">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="7dp"
+            android:src="@drawable/logo_dobos" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txtNamaGuru"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SD KATOLIK FRATER           DON BOSCO MANADO"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/txtNipGuru"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tahun Ajaran 2025/2026"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Timer and Question Number -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="67dp">
+            <TextView
+                android:id="@+id/tvTimer"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:text="30"
+                android:textColor="@color/black"
+                android:paddingLeft="13dp"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:layout_gravity="center"
+                android:importantForAccessibility="yes"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/number_bg"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="80dp">
+            <TextView
+                android:id="@+id/tvQuestionNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pertanyaan 1/5"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Question Box -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/etQuestion"
+            android:layout_width="380dp"
+            android:layout_gravity="center"
+            android:layout_height="130dp"
+            android:hint="Enter Question"
+            android:textColor="@color/black"
+            android:background="@drawable/qbox_bg"
+            android:gravity="top|start"
+            android:padding="10dp" />
+    </FrameLayout>
+
+    <!-- Answer Boxes (A, B, C, D) -->
+    <!-- Repeat these sections for each answer (A, B, C, D) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:background="@drawable/abox_bg"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="left">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="A."
+                android:textSize="17sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="15dp"/>
+
+            <EditText
+                android:id="@+id/etOptionA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="15dp"/>
+        </FrameLayout>
+        <ImageButton
+            android:id="@+id/answerAButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/answer_edit"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="empty_ans" />
+    </LinearLayout>
+
+    <!-- Repeat for other answers (B, C, D) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <FrameLayout
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:background="@drawable/abox_bg"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="left">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="B."
+                android:textSize="17sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="15dp"/>
+
+            <EditText
+                android:id="@+id/etOptionB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="15dp"/>
+        </FrameLayout>
+        <ImageButton
+            android:id="@+id/answerBButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/answer_edit"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="empty_ans" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <FrameLayout
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:background="@drawable/abox_bg"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="left">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="C."
+                android:textSize="17sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="15dp"/>
+
+            <EditText
+                android:id="@+id/etOptionC"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="15dp"/>
+        </FrameLayout>
+        <ImageButton
+            android:id="@+id/answerCButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/answer_edit"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="empty_ans" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <FrameLayout
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:background="@drawable/abox_bg"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="left">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="D."
+                android:textSize="17sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="15dp"/>
+
+            <EditText
+                android:id="@+id/etOptionD"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="15dp"/>
+        </FrameLayout>
+        <ImageButton
+            android:id="@+id/answerDButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/answer_edit"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="empty_ans" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_button"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp"
+            android:contentDescription="btn_back" />
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp"
+            android:backgroundTint="@color/black"
+            android:text="Selanjutnya"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>

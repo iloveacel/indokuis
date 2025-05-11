@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Background_Yellow"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:padding="9dp"
+        android:background="@color/Header_Yellow">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="7dp"
+            android:src="@drawable/logo_dobos" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SD KATOLIK FRATER           DON BOSCO MANADO"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tahun Ajaran 2025/2026"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IndoKuis"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skor Kuis : "
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp">
+    </TextView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/scbox_bg">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nilai : "
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="22dp">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Benar : "
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="100dp">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Salah : "
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="175dp">
+            </TextView>
+        </FrameLayout>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_button"
+            android:layout_gravity="center"
+            android:layout_marginTop="120dp"
+            android:contentDescription="btn_home">
+        </ImageButton>
+    </LinearLayout>
+</LinearLayout>

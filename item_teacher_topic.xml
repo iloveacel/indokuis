@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/teacher_item_topic"
+    android:elevation="2dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:id="@+id/tvNamaTopik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Topik"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:clickable="false"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/tvDeskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi Topik"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="52dp"
+            android:clickable="false"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/tvDeadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deadline: 2025-12-31"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="33dp"
+            android:clickable="false"
+            android:focusable="false" />
+
+        <ImageButton
+            android:id="@+id/topic_menu_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end|top"
+            android:layout_marginEnd="56dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/topic_menu_button"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="edit_topic" />
+
+        <ImageButton
+            android:id="@+id/topic_delete_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end|top"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/topic_delete_button"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="delete_topic" />
+    </FrameLayout>
+</LinearLayout>

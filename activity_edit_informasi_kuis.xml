@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Background_Yellow"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:padding="9dp"
+        android:background="@color/Header_Yellow">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="7dp"
+            android:src="@drawable/logo_dobos" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SD KATOLIK FRATER DON BOSCO MANADO"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tahun Ajaran 2025/2026"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IndoKuis"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
+            android:background="@drawable/scbox_bg_guru">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etJudulTopik"
+                    android:layout_width="150dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:hint="Judul Topik"
+                    android:textSize="16sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="120dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Tenggat Waktu : "
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:id="@+id/etTenggat"
+                    android:layout_width="230dp"
+                    android:layout_height="48dp"
+                    android:minHeight="48dp"
+                    android:hint="DD/MM//YYYY HH:MM"
+                    android:paddingLeft="5dp"
+                    android:fontFamily="sans-serif"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:background="@color/transparent"
+                    android:focusable="false"
+                    android:clickable="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="85dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Durasi Per Soal : "
+                    android:textSize="15sp"/>
+                <EditText
+                    android:id="@+id/etDurasi"
+                    android:layout_width="230dp"
+                    android:layout_height="48dp"
+                    android:minHeight="48dp"
+                    android:hint=" Maks. 60 detik"
+                    android:paddingLeft="5dp"
+                    android:fontFamily="sans-serif"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:background="@color/transparent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="155dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Deskripsi : "
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:id="@+id/etDeskripsi"
+                    android:layout_width="230dp"
+                    android:layout_height="48dp"
+                    android:background="@color/transparent"
+                    android:fontFamily="sans-serif"
+                    android:hint=" . . . . ."
+                    android:minHeight="48dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/btnBackToDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_button"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="14dp"
+            android:contentDescription="btn_home">
+        </ImageButton>
+        <Button
+            android:id="@+id/btnSaveTopic"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="35dp"
+            android:backgroundTint="@color/black"
+            android:text="Simpan"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</LinearLayout>
